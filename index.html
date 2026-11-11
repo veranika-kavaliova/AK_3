@@ -1,0 +1,487 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Анжелика Кашкан · слои</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Анжелика Кашкан — гештальт-терапевт и EMDR-специалист. Онлайн и очно в Варшаве.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500&display=swap">
+<style>
+/* Layout: award-style scroll story — oversized kinetic type, a portrait that opens up as you scroll, a running ticker, a horizontal strip pinned while you scroll down, stacked sticky cards, grain and a soft cursor glow. Light single look in the client's soft palette (no black). Everything is readable with motion off. */
+:root{
+  --cream:#F7F2EA; --cream-2:#EFE7DA; --card:#FFFCF6;
+  --ink:#2F3A33; --soft:#6E766F; --line:#DDD5C7;
+  --sage:#7E9A7A; --sage-deep:#4F6A4C; --sage-soft:#DCE6D5;
+  --butter:#EDD38A; --blush:#E8B8B0; --sky:#A9C3D6;
+  --btn:#4F6A4C; --btn-hover:#425A40;
+  --f-display:"Unbounded","Manrope",system-ui,sans-serif;
+  --f-it:"Playfair Display",Georgia,serif;
+  --f-body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{overflow-x:clip}
+body{background:var(--cream);color:var(--ink);font:400 16.5px/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+h1,h2,h3{margin:0;font-family:var(--f-display);font-weight:400;letter-spacing:-.03em;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--sage-deep);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+em.it{font-family:var(--f-it);font-style:italic;font-weight:400;letter-spacing:0}
+
+/* grain + cursor glow */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.07;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.glow{position:fixed;left:0;top:0;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(237,211,138,.45),rgba(232,184,176,.25) 45%,transparent 70%);filter:blur(10px);transform:translate3d(-999px,-999px,0);transition:opacity .4s}
+@media (hover:none),(pointer:coarse){.glow{display:none}}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--cream)}
+header.top{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);z-index:30;mix-blend-mode:normal}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:500 14px/1 var(--f-display);letter-spacing:-.01em;background:var(--card);padding:10px 16px;border-radius:999px;border:1px solid var(--line)}
+.logo img{height:24px;width:auto;display:block}
+nav.menu{display:flex;gap:2px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px}
+nav.menu a{text-decoration:none;font-size:13.5px;font-weight:600;color:var(--soft);padding:8px 14px;border-radius:999px;transition:background .2s,color .2s}
+nav.menu a:hover{background:var(--sage-soft);color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 15px/1 var(--f-body);text-decoration:none;border-radius:999px;padding:16px 26px;cursor:pointer;border:0;background:var(--btn);color:#FFFCF6;transition:background .25s,transform .25s}
+.btn:hover{background:var(--btn-hover)}
+.btn .ar{display:inline-flex;width:26px;height:26px;border-radius:50%;background:rgba(255,252,246,.18);align-items:center;justify-content:center;transition:transform .3s}
+.btn:hover .ar{transform:rotate(-45deg)}
+.btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.line:hover{background:var(--ink);color:var(--cream)}
+.btn.small{padding:11px 18px;font-size:14px}
+
+/* hero: name + portrait that opens on scroll */
+.hero{position:relative;height:170vh}
+.hero .pin{position:sticky;top:0;height:100svh;min-height:560px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:4vh}
+.hero .kick{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font:600 12px/1.4 var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.hero h1{font-size:clamp(54px,12.2vw,196px);line-height:.84;letter-spacing:-.06em;font-weight:300;margin-top:2vh;position:relative;z-index:2;transition:color .4s,text-shadow .4s}
+.hero.open h1{color:#FFFCF6;text-shadow:0 2px 30px rgba(47,58,51,.35)}
+.hero.open .kick{color:#FFFCF6}
+.hero .kick{position:relative;z-index:2;transition:color .4s}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(47,58,51,.05),rgba(47,58,51,.35));opacity:var(--sh,0)}
+.hero h1 .row{display:block;white-space:nowrap}
+.hero h1 .r2{text-align:right}
+.hero h1 .l{display:inline-block;transform:translateY(var(--y,0));transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.photo{position:absolute;left:50%;top:50%;width:var(--w,26vw);height:var(--h,34vw);top:var(--top,12vh);transform:translateX(-50%);border-radius:var(--rad,999px);overflow:hidden;z-index:1;box-shadow:0 40px 80px -50px rgba(47,58,51,.6);background:var(--sage-soft)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;transform:scale(var(--s,1.15));display:block}
+.hero .under{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-top:3vh;position:relative;z-index:2}
+.hero .lead{font-size:clamp(17px,1.5vw,20px);line-height:1.5;max-width:34ch}
+.hero .ctas{display:flex;gap:10px;flex-wrap:wrap}
+.scrollhint{font:600 12px var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--soft);display:flex;gap:8px;align-items:center}
+.scrollhint i{width:1px;height:28px;background:var(--soft);display:block;animation:hint 1.8s ease-in-out infinite;transform-origin:top}
+@keyframes hint{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ticker */
+.ticker{background:var(--sage-deep);color:var(--cream);overflow:hidden;padding-block:22px;position:relative;z-index:2}
+.ticker .track{display:flex;gap:44px;width:max-content;animation:tick 38s linear infinite;font:300 clamp(26px,3.4vw,46px)/1 var(--f-display);letter-spacing:-.03em;white-space:nowrap}
+.ticker .track span{display:flex;align-items:center;gap:44px}
+.ticker .track span::after{content:"";width:14px;height:14px;border-radius:50%;background:var(--butter);flex-shrink:0}
+.ticker .track span:nth-child(3n+2)::after{background:var(--blush)} .ticker .track span:nth-child(3n)::after{background:var(--sky)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* statement */
+.statement{padding-block:16vh 12vh;position:relative;z-index:2}
+.statement p{font:300 clamp(28px,4.2vw,62px)/1.12 var(--f-display);letter-spacing:-.035em;max-width:20ch}
+.statement p .w{opacity:var(--o,.3);transition:opacity .3s}
+.statement .meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:10vh;border-top:1px solid var(--line);padding-top:24px}
+.statement .meta b{display:block;font:300 clamp(36px,4.4vw,64px)/1 var(--f-display);letter-spacing:-.05em}
+.statement .meta span{font-size:14px;color:var(--soft)}
+
+/* horizontal strip: requests */
+.hz{position:relative;z-index:2}
+.hz .pin{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:4vh}
+.hz .head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.hz h2{font-size:clamp(34px,5vw,76px);line-height:.95}
+.hz .count{font:600 13px var(--f-body);letter-spacing:.1em;color:var(--soft)}
+.strip{display:flex;gap:18px;padding-left:max(20px,calc((100vw - 1240px)/2 + 20px));will-change:transform}
+.req{flex:0 0 clamp(250px,24vw,340px);height:clamp(300px,48svh,440px);border-radius:28px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;background:var(--card);border:1px solid var(--line);position:relative;overflow:hidden}
+.req .n{font:300 15px var(--f-display);color:var(--soft)}
+.req p{font:400 clamp(20px,1.8vw,25px)/1.2 var(--f-display);letter-spacing:-.025em}
+.req::before{content:"";position:absolute;right:-50px;top:-50px;width:150px;height:150px;border-radius:50%;background:var(--c);opacity:.55}
+.req:nth-child(4n+1){--c:var(--butter)} .req:nth-child(4n+2){--c:var(--blush)} .req:nth-child(4n+3){--c:var(--sky)} .req:nth-child(4n+4){--c:var(--sage-soft)}
+.req.ph{padding:0;border:0;background:var(--sage-soft)}
+.req.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.req.ph::before{display:none}
+.req.end{background:var(--sage-deep);color:var(--cream);border:0}
+.req.end p{font-family:var(--f-it);font-style:italic;font-size:clamp(24px,2.2vw,32px);letter-spacing:0}
+.req.end::before{background:var(--butter);opacity:.3}
+
+/* about */
+.about{padding-block:14vh;position:relative;z-index:2}
+.about .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:6vw;align-items:center}
+.about .img{position:relative;border-radius:240px 240px 28px 28px;overflow:hidden;aspect-ratio:4/5;background:var(--blush)}
+.about .img img,.about .img video{width:100%;height:100%;object-fit:cover;display:block;transform:translateY(var(--py,0)) scale(1.12)}
+.about .badge{position:absolute;right:16px;bottom:16px;width:116px;height:116px;border-radius:50%;background:var(--butter);display:flex;align-items:center;justify-content:center;text-align:center;font:500 12px/1.25 var(--f-body);letter-spacing:.06em;text-transform:uppercase;animation:spin 18s linear infinite}
+.about .badge span{animation:spin 18s linear infinite reverse;display:block;padding:10px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.label{font:600 12px/1.4 var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.about h2{font-size:clamp(32px,3.8vw,56px);line-height:1.02;margin-top:14px}
+.about .body{display:flex;flex-direction:column;gap:14px;margin-top:26px;font-size:17px;max-width:56ch}
+.about .facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.about .facts span{font-size:14px;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
+
+/* approach: split with blend circle */
+.approach{background:var(--cream-2);padding-block:12vh;position:relative;z-index:2;overflow:hidden}
+.approach .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--ink)}
+.method{padding:40px 40px 10px 0;position:relative}
+.method+.method{padding-left:40px;border-left:1px solid var(--line)}
+.method .tag{font:600 12px var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.method h3{font-size:clamp(34px,4.6vw,68px);line-height:.95;margin-top:16px}
+.method p{font-size:16.5px;margin-top:20px;max-width:46ch}
+.approach .head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+.approach h2{font-size:clamp(32px,4vw,60px);line-height:1}
+.orb{position:absolute;width:44vw;height:44vw;max-width:620px;max-height:620px;border-radius:50%;right:-12vw;top:-14vw;background:radial-gradient(circle at 35% 35%,var(--butter),var(--blush) 55%,transparent 72%);opacity:.55;pointer-events:none;transform:translateY(var(--oy,0))}
+
+/* steps: stacked sticky cards */
+.steps{padding-block:12vh 4vh;position:relative;z-index:2}
+.steps .head{margin-bottom:6vh}
+.steps h2{font-size:clamp(32px,4vw,60px);line-height:1}
+.stack{display:flex;flex-direction:column;gap:3vh}
+.st{position:sticky;top:calc(96px + var(--i) * 22px);border-radius:32px;padding:clamp(24px,4vw,48px);min-height:44svh;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:4vw;align-items:end;background:var(--c);box-shadow:0 -12px 40px -30px rgba(47,58,51,.5)}
+.st:nth-child(1){--c:var(--sage-soft)} .st:nth-child(2){--c:#F3E5BE} .st:nth-child(3){--c:#F3DCD7} .st:nth-child(4){--c:#DCE6EE}
+.st .num{font:300 clamp(80px,13vw,190px)/.8 var(--f-display);letter-spacing:-.07em}
+.st h3{font-size:clamp(26px,3vw,42px);line-height:1}
+.st p{font-size:17px;margin-top:14px;max-width:42ch}
+.conf{margin-top:5vh;font-size:15px;color:var(--soft);max-width:70ch}
+.conf b{color:var(--ink)}
+
+/* prices */
+.prices{padding-block:12vh;position:relative;z-index:2}
+.prices .rows{border-top:1px solid var(--ink)}
+.prow{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) auto;gap:24px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line);transition:padding .3s}
+.prow:hover{padding-left:16px}
+.prow h3{font-size:clamp(24px,2.6vw,38px);line-height:1}
+.prow p{font-size:15px;color:var(--soft)}
+.prow .amt{font:300 clamp(54px,7vw,104px)/.9 var(--f-display);letter-spacing:-.06em;text-align:right;white-space:nowrap}
+.prow .amt small{font:500 14px var(--f-body);letter-spacing:0;color:var(--soft);margin-left:6px}
+.prices .rules{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:40px}
+.prices .rules div{font-size:14.5px}
+.prices .rules b{display:block;font:500 13px var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin-bottom:6px}
+.prices h2{font-size:clamp(32px,4vw,60px);line-height:1;margin-bottom:5vh}
+
+/* education + not-with */
+.edu{background:var(--card);padding-block:12vh;position:relative;z-index:2}
+.edu .grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:6vw}
+.edu h2{font-size:clamp(32px,4vw,60px);line-height:1;margin-bottom:5vh}
+.edu ol{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.edu li{display:grid;grid-template-columns:130px minmax(0,1fr);gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.edu .y{font:300 18px/1.3 var(--f-display);color:var(--sage-deep)}
+.edu b{display:block;font-weight:600}
+.edu span{font-size:14.5px;color:var(--soft)}
+.scans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:22px}
+.scan{aspect-ratio:3/4;border-radius:16px;background:var(--cream-2);border:1px dashed var(--line);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--soft);overflow:hidden;padding:0;cursor:zoom-in}
+.scan.empty{cursor:default}
+.scan img{width:100%;height:100%;object-fit:cover;display:block}
+.notwith{background:var(--sage-deep);color:var(--cream);border-radius:28px;padding:30px;align-self:start;position:sticky;top:100px}
+.notwith h3{font-size:30px;line-height:1.05}
+.notwith ul{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:15.5px}
+.notwith li{padding-bottom:12px;border-bottom:1px solid rgba(247,242,234,.18)}
+.notwith p{margin-top:16px;font-size:14.5px;opacity:.8}
+dialog{border:0;padding:0;background:transparent;max-width:min(900px,94vw)}
+dialog::backdrop{background:rgba(47,58,51,.75)}
+dialog img{width:100%;border-radius:14px;display:block}
+dialog button{margin-top:10px;background:var(--card);border:0;border-radius:999px;padding:8px 16px;font:600 14px var(--f-body);cursor:pointer}
+
+/* contact */
+.contact{padding-block:14vh 6vh;position:relative;z-index:2}
+.contact .big{font:300 clamp(50px,11vw,180px)/.86 var(--f-display);letter-spacing:-.06em}
+.contact .big em{font-family:var(--f-it);font-style:italic;font-weight:400;letter-spacing:-.02em;color:var(--sage-deep)}
+.contact .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:5vw;margin-top:8vh;align-items:start}
+.contact .lead{font-size:18px;max-width:36ch}
+.links{margin-top:28px;border-top:1px solid var(--ink)}
+.lnk{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;border-bottom:1px solid var(--line);text-decoration:none;font:300 clamp(22px,2.4vw,34px)/1 var(--f-display);letter-spacing:-.03em;transition:padding .3s,color .3s}
+.lnk:hover{padding-left:14px;color:var(--sage-deep)}
+.lnk small{font:500 14px var(--f-body);letter-spacing:0;color:var(--soft)}
+.contact .tz{margin-top:16px;font-size:14px;color:var(--soft)}
+form{background:var(--card);border-radius:28px;padding:30px;display:flex;flex-direction:column;gap:14px;border:1px solid var(--line)}
+form h3{font-size:26px}
+form label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+form label em{font-style:normal;font-weight:400;color:var(--soft)}
+form input,form textarea{font:400 16px/1.5 var(--f-body);color:var(--ink);background:var(--cream);border:1px solid transparent;border-radius:14px;padding:13px 16px;width:100%}
+form input:focus,form textarea:focus{outline:none;border-color:var(--sage)}
+form textarea{min-height:76px;resize:vertical}
+.seg{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.seg button{font:600 14px var(--f-body);color:var(--ink);background:var(--cream);border:0;border-radius:999px;padding:10px 16px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--cream)}
+.fstatus{font-size:14px;color:var(--sage-deep);min-height:1.4em}
+.formnote{font-size:13px;color:var(--soft)}
+footer{position:relative;z-index:2;border-top:1px solid var(--line);padding-block:22px 30px;font-size:13px;color:var(--soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* mobile & reduced motion: no pinning, everything plain */
+@media (max-width:860px){
+  nav.menu{display:none}
+  .hero{height:auto}
+  .hero .pin{position:relative;height:auto;min-height:0;padding-top:96px;padding-bottom:40px;overflow:visible}
+  .photo{position:relative;left:auto;top:auto;transform:none;width:min(72vw,320px)!important;height:auto!important;aspect-ratio:4/5;margin:0 auto 22px;border-radius:999px 999px 26px 26px!important}
+  .photo img{transform:none!important}
+  .hero h1{font-size:clamp(48px,15vw,90px)}
+  .hero h1 .r2{text-align:left}
+  .hz{height:auto!important}
+  .hz .pin{position:relative;height:auto;padding-block:10vh 4vh}
+  .strip{transform:none!important;flex-wrap:wrap;padding-inline:max(20px,env(safe-area-inset-left,0px))}
+  .strip{gap:10px}
+  .req{flex:1 1 calc(50% - 5px);height:auto;min-height:0;padding:16px;border-radius:20px;gap:18px}
+  .req p{font-size:16px}
+  .req::before{width:70px;height:70px;right:-24px;top:-24px}
+  .hz .pin{gap:22px}
+  .statement{padding-block:9vh 7vh}
+  .statement .meta{margin-top:6vh}
+  .about,.approach,.steps,.prices,.edu{padding-block:8vh}
+  .contact{padding-block:9vh 5vh}
+  .req.ph{display:none}
+  .statement .meta{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .about .grid,.edu .grid,.contact .grid{grid-template-columns:minmax(0,1fr)}
+  .about .img{max-width:380px}
+  .approach .grid{grid-template-columns:minmax(0,1fr)}
+  .method,.method+.method{padding:28px 0;border-left:0}
+  .method+.method{border-top:1px solid var(--line)}
+  .st{grid-template-columns:minmax(0,1fr);min-height:0;gap:10px;top:calc(80px + var(--i) * 14px)}
+  .prow{grid-template-columns:minmax(0,1fr) auto}
+  .prow p{grid-column:1/-1;grid-row:2}
+  .prices .rules{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .notwith{position:static}
+}
+@media (max-width:520px){
+  .req p{font-size:15px}
+  .edu li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .prices .rules{grid-template-columns:minmax(0,1fr)}
+  form{padding:22px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .hero{height:auto}.hero .pin{position:relative;height:auto;padding-top:110px}
+  .photo{position:relative;left:auto;top:auto;transform:none;margin:0 auto 24px;width:min(60vw,340px);height:auto;aspect-ratio:4/5}
+  .hz{height:auto!important}.hz .pin{position:relative;height:auto;padding-block:10vh}
+  .strip{transform:none!important;flex-wrap:wrap}
+  .statement p .w{opacity:1!important}
+}
+</style>
+
+<div class="glow" id="glow" aria-hidden="true"></div>
+
+<header class="top"><div class="wrap">
+  <a class="logo" href="#hero"><img src="logo.png" alt="" data-hide>Анжелика Кашкан</a>
+  <nav class="menu" aria-label="Разделы"><a href="#requests">Запросы</a><a href="#about">Обо мне</a><a href="#approach">Подход</a><a href="#prices">Цены</a><a href="#education">Образование</a></nav>
+  <a class="btn small" href="#contact">Записаться</a>
+</div></header>
+
+<main>
+  <section class="hero" id="hero">
+    <div class="pin"><div class="wrap">
+      <div class="photo" id="photo"><img src="portrait.jpg" alt="Анжелика Кашкан"></div>
+      <div class="kick"><span>Психолог · гештальт · EMDR</span><span>Варшава · онлайн</span></div>
+      <h1 aria-label="Анжелика Кашкан"><span class="row r1" aria-hidden="true">Анжелика</span><span class="row r2" aria-hidden="true">Кашкан</span></h1>
+      <div class="under">
+        <p class="lead">Помогаю разобраться в отношениях с собой и с другими, пройти через кризис и перестать жить прошлым. <em class="it">Бережно и на равных.</em></p>
+        <div class="ctas"><a class="btn" href="https://t.me/psy_kashkan" target="_blank" rel="noopener">Написать в Telegram <span class="ar">↗</span></a><a class="btn line" href="#contact">Оставить заявку</a></div>
+      </div>
+    </div></div>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div class="track" id="track"></div></div>
+
+  <section class="statement wrap" aria-label="Коротко">
+    <p id="stmt">Терапия — это место, где можно перестать справляться в одиночку и заново встретиться с собой.</p>
+    <div class="meta">
+      <div><b data-count="6">6</b><span>лет практики</span></div>
+      <div><b data-count="4000" data-plus>4000+</b><span>часов с клиентами</span></div>
+      <div><b>2</b><span>метода: гештальт и EMDR</span></div>
+      <div><b>RU</b><span>онлайн из любой страны</span></div>
+    </div>
+  </section>
+
+  <section class="hz" id="requests">
+    <div class="pin">
+      <div class="wrap head"><h2>С чем можно <em class="it">прийти</em></h2><span class="count">листайте вниз →</span></div>
+      <div class="strip" id="strip">
+        <article class="req"><span class="n">01</span><p>Сложно в отношениях — с собой и с близкими</p></article>
+        <article class="req"><span class="n">02</span><p>Отношения, в которых теряешь себя</p></article>
+        <article class="req"><span class="n">03</span><p>Тревога, которая не отпускает</p></article>
+        <article class="req ph"><img src="full.jpg" alt="" loading="lazy"></article>
+        <article class="req"><span class="n">04</span><p>Кризис, переезд, жизнь в эмиграции</p></article>
+        <article class="req"><span class="n">05</span><p>Ощущение себя ребёнком в теле взрослого</p></article>
+        <article class="req"><span class="n">06</span><p>Кажется, что живёшь не свою жизнь</p></article>
+        <article class="req"><span class="n">07</span><p>Трудно принимать решения, не хватает уверенности</p></article>
+        <article class="req"><span class="n">08</span><p>Прошлое так влияет, что определяет настоящее</p></article>
+        <article class="req"><span class="n">09</span><p>Эмоции захлёстывают, сложно с ними справиться</p></article>
+        <article class="req"><span class="n">10</span><p>Зависимое поведение</p></article>
+        <article class="req end"><span class="n">—</span><p>Не знаешь, как сформулировать? Разберёмся вместе.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about"><div class="wrap grid">
+    <div class="img" id="aboutImg">
+      <video src="video.mp4" controls playsinline preload="none" data-video></video>
+      <img src="about.jpg" alt="Анжелика Кашкан" hidden>
+      <div class="badge" aria-hidden="true"><span>гештальт · EMDR · Варшава</span></div>
+    </div>
+    <div>
+      <div class="label">Обо мне</div>
+      <h2>Привет, я Анжелика. Тёплая, бережная — и <em class="it">устойчивая</em>.</h2>
+      <div class="body">
+        <p>Я психолог и гештальт-терапевт, работаю с травмой в методе EMDR. Живу в Варшаве и принимаю очно в районе Мокотув, а онлайн работаю с людьми из Европы, России, Беларуси, Казахстана.</p>
+        <p>Могу быть прямой, когда это важно. Внимательна к деталям — к тому, что звучит между слов.</p>
+        <p>Вне кабинета люблю путешествовать, особенно на машине, и долгие пешие прогулки.</p>
+      </div>
+      <div class="facts"><span>лучше понимать себя</span><span>видеть объёмнее</span><span>отношения без потери себя</span><span>прошлое — не приговор</span></div>
+    </div>
+  </div></section>
+
+  <section class="approach" id="approach"><span class="orb" id="orb" aria-hidden="true"></span><div class="wrap">
+    <div class="head"><h2>Два метода — <em class="it">одна цель</em></h2><span class="label">метод выбираем под тебя</span></div>
+    <div class="grid">
+      <article class="method"><span class="tag">01 · основной подход</span><h3>Гештальт</h3><p>Смотрим на то, что происходит с тобой здесь и сейчас — в чувствах, в теле, в отношениях. Через живой контакт становится видно, как ты обходишься с собой и другими, и появляется выбор действовать иначе.</p></article>
+      <article class="method"><span class="tag">02 · работа с травмой</span><h3>EMDR</h3><p>ДПДГ — метод для работы с тяжёлыми событиями прошлого, которые продолжают влиять на настоящее. Помогает переработать болезненные воспоминания, чтобы они стали частью истории, а не текущей жизни.</p></article>
+    </div>
+  </div></section>
+
+  <section class="steps wrap" id="how">
+    <div class="head"><div class="label">Как всё устроено</div><h2 style="margin-top:12px">Четыре шага до <em class="it">первой встречи</em> и дальше</h2></div>
+    <div class="stack">
+      <article class="st" style="--i:0"><span class="num">01</span><div><h3>Заявка</h3><p>Пишешь в Telegram или оставляешь заявку на сайте. Подбираем удобное время.</p></div></article>
+      <article class="st" style="--i:1"><span class="num">02</span><div><h3>Подтверждение</h3><p>Для первой встречи — 100% предоплата не позднее чем за час до сессии. Это подтверждение твоего присутствия.</p></div></article>
+      <article class="st" style="--i:2"><span class="num">03</span><div><h3>Знакомство</h3><p>Говорим о запросе и о том, что для тебя важно. Ты решаешь, подхожу ли я тебе.</p></div></article>
+      <article class="st" style="--i:3"><span class="num">04</span><div><h3>Регулярные встречи</h3><p>Онлайн или очно в Варшаве. Дальше можно оплачивать в день сессии.</p></div></article>
+    </div>
+    <p class="conf"><b>Конфиденциально.</b> Всё, что ты рассказываешь, остаётся между нами. Исключения — ситуации, когда есть угроза жизни.</p>
+  </section>
+
+  <section class="prices wrap" id="prices">
+    <div class="label">Стоимость</div>
+    <h2 style="margin-top:12px">Форматы и <em class="it">цены</em></h2>
+    <div class="rows">
+      <div class="prow"><h3>Индивидуальная сессия</h3><p>Гештальт: отношения, тревога, кризисы, самооценка, эмиграция · 50 минут</p><div class="amt">45 €</div></div>
+      <div class="prow"><h3>Сессия EMDR (ДПДГ)</h3><p>Работа с событиями прошлого, которые мешают жить сейчас · 60 минут</p><div class="amt">50 €</div></div>
+    </div>
+    <div class="rules">
+      <div><b>Предоплата</b>Для новых клиентов 100%, не позднее чем за час до первой сессии</div>
+      <div><b>Перенос</b>Бесплатно, если предупредить за 24 часа</div>
+      <div><b>Оплата</b>Переводом или на карту</div>
+      <div><b>Где</b>Онлайн или очно — Варшава, Мокотув. Время CET</div>
+    </div>
+  </section>
+
+  <section class="edu" id="education"><div class="wrap grid">
+    <div>
+      <div class="label">Образование</div>
+      <h2 style="margin-top:12px">Образование и <em class="it">обучение</em></h2>
+      <ol>
+        <li><span class="y">2024—2026</span><div><b>Московский гештальт институт</b><span>«Кризисы и травмы», 240 часов</span></div></li>
+        <li><span class="y">2023—2024</span><div><b>ОПП «Гештальт-подход»</b><span>«Психиатрия для психологов», 100 часов</span></div></li>
+        <li><span class="y">2020—2021</span><div><b>Московский гештальт институт</b><span>«Зависимость и созависимость», 180 часов</span></div></li>
+        <li><span class="y">2019—2024</span><div><b>Московский гештальт институт</b><span>«Основы гештальт-терапии», 1 и 2 ступени</span></div></li>
+        <li><span class="y">2014—2019</span><div><b>РГСУ</b><span>Высшее образование, психология</span></div></li>
+      </ol>
+      <div class="scans" id="scans"></div>
+    </div>
+    <aside class="notwith"><h3>С чем я не работаю</h3>
+      <ul><li>Психиатрические диагнозы — шизофрения, биполярное расстройство</li><li>Дети и подростки до 18 лет</li><li>Зависимость в период активного употребления</li></ul>
+      <p>Если это про тебя — напиши, помогу найти подходящего специалиста.</p></aside>
+  </div></section>
+
+  <section class="contact" id="contact"><div class="wrap">
+    <div class="big">Давай<br><em>познакомимся</em></div>
+    <div class="grid">
+      <div>
+        <p class="lead">Напиши мне — расскажу о свободном времени и отвечу на вопросы. Первый шаг самый трудный, дальше пойдём вместе.</p>
+        <div class="links">
+          <a class="lnk" href="https://t.me/psy_kashkan" target="_blank" rel="noopener">Telegram <small>@psy_kashkan ↗</small></a>
+          <a class="lnk" href="https://instagram.com/psy_kashkan" target="_blank" rel="noopener">Instagram <small>@psy_kashkan ↗</small></a>
+        </div>
+        <p class="tz">Время по Варшаве (CET). Онлайн — из любой страны.</p>
+      </div>
+      <form id="form" novalidate>
+        <h3>Оставить заявку</h3>
+        <label for="fName">Как к тебе обращаться<input id="fName" type="text" autocomplete="given-name" placeholder="Имя"></label>
+        <label for="fContact">Как с тобой связаться<input id="fContact" type="text" placeholder="Telegram, WhatsApp или телефон"></label>
+        <div><span style="font-size:14px;font-weight:600">Формат</span><div class="seg" id="fFormat" role="group" aria-label="Формат"><button type="button" aria-pressed="true">Онлайн</button><button type="button" aria-pressed="false">Очно в Варшаве</button><button type="button" aria-pressed="false">Пока не знаю</button></div></div>
+        <label for="fMsg">Коротко о запросе <em>— по желанию</em><textarea id="fMsg" placeholder="Можно в двух словах"></textarea></label>
+        <a class="btn" id="fSend" href="https://t.me/psy_kashkan" target="_blank" rel="noopener" style="align-self:flex-start">Отправить в Telegram <span class="ar">↗</span></a>
+        <p class="fstatus" id="fStatus" role="status"></p>
+        <p class="formnote">Текст заявки скопируется, и откроется чат со мной — останется вставить и отправить. Данные никуда не сохраняются.</p>
+      </form>
+    </div>
+  </div></section>
+</main>
+
+<footer><div class="wrap"><span>© Анжелика Кашкан, психолог</span><span>Не является медицинской услугой. В кризисной ситуации обратись в службу экстренной помощи своей страны.</span></div></footer>
+
+<dialog id="lb"><img id="lbImg" alt=""><button type="button" id="lbClose">Закрыть</button></dialog>
+
+<script>
+(function(){
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const narrow=()=>innerWidth<=860;
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+
+/* split hero letters for a gentle entrance (visible at rest: they start at 0 offset if script is slow) */
+$$('.hero h1 .row').forEach((r,ri)=>{const t=r.textContent;r.textContent='';[...t].forEach((ch,i)=>{const s=document.createElement('span');s.className='l';s.textContent=ch;s.style.transitionDelay=(ri*.15+i*.03)+'s';r.appendChild(s)})});
+if(!reduce){$$('.hero .l').forEach(l=>l.style.setProperty('--y','40%'));requestAnimationFrame(()=>requestAnimationFrame(()=>$$('.hero .l').forEach(l=>l.style.setProperty('--y','0'))))}
+
+/* ticker content */
+const words=['отношения','тревога','кризис','эмиграция','созависимость','самооценка','травма','решения','эмоции','прошлое'];
+const half=words.map(w=>`<span>${w}</span>`).join('');$('#track').innerHTML=half+half;
+
+/* statement words light up while scrolling */
+const st=$('#stmt');st.innerHTML=st.textContent.split(' ').map(w=>`<span class="w">${w}</span>`).join(' ');
+const ws=$$('#stmt .w');
+
+/* horizontal strip height */
+const hz=$('.hz'),strip=$('#strip');
+function sizeHz(){if(narrow()||reduce){hz.style.height='';return}const extra=strip.scrollWidth-innerWidth+80;hz.style.height=(innerHeight+Math.max(0,extra))+'px'}
+
+/* count-up */
+const counted=new WeakSet();
+function countUp(el){if(counted.has(el))return;counted.add(el);const to=+el.dataset.count,plus=el.hasAttribute('data-plus');if(reduce){return}const t0=performance.now();const step=t=>{const k=clamp((t-t0)/1400,0,1),e=1-Math.pow(1-k,3);el.textContent=Math.round(to*e)+(plus?'+':'');if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step)}
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting)countUp(en.target)}),{threshold:.6});$$('[data-count]').forEach(e=>io.observe(e));
+
+/* scroll scene */
+const photo=$('#photo'),hero=$('.hero'),orb=$('#orb'),aboutImg=$('#aboutImg img');
+function frame(){
+  const vh=innerHeight,y=scrollY;
+  if(!narrow()&&!reduce){
+    const hr=hero.getBoundingClientRect();const p=clamp(-hr.top/(hr.height-vh),0,1);
+    const w0=Math.min(innerWidth*.26,360),h0=w0*1.3;const w1=innerWidth*.92;const pinTop=hero.querySelector('.pin').getBoundingClientRect().top;const hb=hero.querySelector('h1').getBoundingClientRect().bottom-pinTop;const top0=Math.max(70,(vh-h0)/2-vh*.08),top1=14;const h1=hb+18-top1;photo.style.setProperty('--top',(top0+(top1-top0)*p)+'px');hero.classList.toggle('open',p>.38);photo.style.setProperty('--sh',p);
+    photo.style.setProperty('--w',(w0+(w1-w0)*p)+'px');photo.style.setProperty('--h',(h0+(h1-h0)*p)+'px');
+    photo.style.setProperty('--rad',(999*(1-p)+28*p)+'px');photo.style.setProperty('--s',(1.15-.15*p));
+    const r=hz.getBoundingClientRect();const q=clamp(-r.top/(r.height-vh),0,1);const max=strip.scrollWidth-innerWidth+80;strip.style.transform=`translate3d(${-q*Math.max(0,max)}px,0,0)`;
+  }
+  if(!reduce){
+    const sr=st.getBoundingClientRect();const k=clamp((vh*.85-sr.top)/(sr.height+vh*.35),0,1);const n=Math.round(k*ws.length);ws.forEach((w,i)=>w.style.setProperty('--o',i<n?1:.3));
+    const orr=orb.parentElement.getBoundingClientRect();orb.style.setProperty('--oy',(orr.top*-.15)+'px');
+    if(aboutImg){const ar=aboutImg.parentElement.getBoundingClientRect();aboutImg.style.setProperty('--py',(ar.top*-.06)+'px')}
+  }
+}
+let ticking=false;addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(()=>{frame();ticking=false})}},{passive:true});
+addEventListener('resize',()=>{sizeHz();frame()});
+addEventListener('load',()=>{sizeHz();frame()});sizeHz();frame();
+
+/* cursor glow */
+const g=$('#glow');let gx=-999,gy=-999,tx=-999,ty=-999;
+if(!reduce&&matchMedia('(pointer:fine)').matches){addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY},{passive:true});(function loop(){gx+=(tx-gx)*.08;gy+=(ty-gy)*.08;g.style.transform=`translate3d(${gx}px,${gy}px,0)`;requestAnimationFrame(loop)})()}
+
+/* logo + about video/photo + scans */
+const lg=$('img[data-hide]');const noLogo=()=>lg.remove();if(lg.complete&&lg.naturalWidth===0)noLogo();else lg.addEventListener('error',noLogo);
+const v=$('video[data-video]'),ai=v.nextElementSibling;const toPhoto=()=>{v.hidden=true;ai.hidden=false};fetch(v.getAttribute('src'),{method:'HEAD'}).then(r=>{if(!r.ok)toPhoto()}).catch(toPhoto);
+const sc=$('#scans');
+Promise.all([1,2,3,4,5,6].map(i=>new Promise(res=>{const im=new Image();im.onload=()=>res(im);im.onerror=()=>res(null);im.src=`diploma-${i}.jpg`}))).then(list=>{const ok=list.filter(Boolean);
+  if(ok.length)ok.forEach((im,i)=>{const b=document.createElement('button');b.type='button';b.className='scan';b.setAttribute('aria-label','Открыть документ '+(i+1));im.alt='Документ '+(i+1);b.appendChild(im);sc.appendChild(b)});
+  else sc.innerHTML='<div class="scan empty">скан диплома</div><div class="scan empty">скан диплома</div>'});
+sc.addEventListener('click',e=>{const b=e.target.closest('button.scan');if(!b)return;$('#lbImg').src=b.querySelector('img').src;try{$('#lb').showModal()}catch(err){$('#lb').setAttribute('open','')}});
+$('#lbClose').addEventListener('click',()=>$('#lb').close());$('#lb').addEventListener('click',e=>{if(e.target.id==='lb')$('#lb').close()});
+
+/* form → copy + open Telegram */
+$('#fFormat').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$$('#fFormat button').forEach(x=>x.setAttribute('aria-pressed',x===b))});
+$('#form').addEventListener('submit',e=>e.preventDefault());
+$('#fSend').addEventListener('click',()=>{const fmt=$('#fFormat [aria-pressed="true"]').textContent;
+  const t=`Здравствуйте, Анжелика! Хочу записаться на консультацию.\nИмя: ${$('#fName').value||'—'}\nСвязь: ${$('#fContact').value||'—'}\nФормат: ${fmt}${$('#fMsg').value?'\nЗапрос: '+$('#fMsg').value:''}`;
+  const ok=()=>{$('#fStatus').textContent='Текст заявки скопирован — вставь его в открывшемся чате и отправь.'};const fail=()=>{$('#fStatus').textContent='Не получилось скопировать — просто напиши в открывшемся чате, что хочешь записаться.'};
+  try{navigator.clipboard.writeText(t).then(ok,fail)}catch(err){fail()}});
+})();
+</script>
+
+</body></html>
